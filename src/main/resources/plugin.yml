@@ -1,0 +1,13 @@
+name: Temperature
+version: 1.0.0
+main: dev.xygave.temperature.TemperaturePlugin
+api-version: '1.21.11'
+description: Lightweight biome cold and heat survival system
+commands:
+  temperature:
+    description: Temperature information and config reload
+    usage: /temperature [reload|status]
+permissions:
+  temperature.admin:
+    description: Allows reloading the config
+    default: op
