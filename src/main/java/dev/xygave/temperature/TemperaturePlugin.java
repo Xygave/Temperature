@@ -194,7 +194,7 @@ public final class TemperaturePlugin extends JavaPlugin implements Listener {
     private void setFrost(Player p, State s) {
         if (p.getLocation().getBlock().getType() == Material.POWDER_SNOW) return;
         int max = p.getMaxFreezeTicks();
-        int target = Math.max(1, Math.min(max - 25, (int)(max * Math.max(0.1, Math.min(0.9, getConfig().getDouble("cold.frost-screen-strength", 0.75)))));
+        int target = Math.max(1, Math.min(max - 25, (int) (max * Math.max(0.1, Math.min(0.9, getConfig().getDouble("cold.frost-screen-strength", 0.75))))));
         if (max > 30 && p.getFreezeTicks() < target) { p.setFreezeTicks(target); s.ownsFrost = true; }
     }
     private void clearFrost(Player p, State s) {
